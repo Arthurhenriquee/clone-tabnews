@@ -40,7 +40,7 @@ function getSSLValues() {
     };
   }
 
-  if (process.env.NODE_ENV === "staging") return true
+  if (process.env.NODE_ENV === "preview") return true
   
   return process.env.NODE_ENV === "production" ? false : false;
 }
