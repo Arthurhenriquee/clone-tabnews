@@ -39,8 +39,6 @@ function getSSLValues() {
       ca: process.env.POSTGRES_CA,
     };
   }
-
-  if (process.env.NODE_ENV === "preview") return true
   
-  return process.env.NODE_ENV === "production" ? false : false;
+  return process.env.NODE_ENV === "production" ? true : false;
 }
